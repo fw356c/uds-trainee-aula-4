@@ -30,8 +30,11 @@ CREATE TABLE `comentarios` (
   `comentario` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `postagen_id_idx` (`id_postagens`),
-  CONSTRAINT `postagen_id` FOREIGN KEY (`id_postagens`) REFERENCES `postagens` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  KEY `pessoa_id_idx` (`id_pessoas`),
+  KEY `wazsexdrcftvgybhu_idx` (`id_pessoas`),
+  CONSTRAINT `postagen_id` FOREIGN KEY (`id_postagens`) REFERENCES `postagens` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `wazsexdrcftvgybhu` FOREIGN KEY (`id_pessoas`) REFERENCES `pessoas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +43,7 @@ CREATE TABLE `comentarios` (
 
 LOCK TABLES `comentarios` WRITE;
 /*!40000 ALTER TABLE `comentarios` DISABLE KEYS */;
-INSERT INTO `comentarios` VALUES (1,1,2,'2018-06-30 15:03:00','Achou que não ia ter banco ? achou errado!');
+INSERT INTO `comentarios` VALUES (1,1,2,'2018-06-30 15:03:00','Achou que não ia ter banco ? achou errado!'),(2,1,2,'2018-06-30 15:40:00','neumar continua a rolar no campo, e agora produção ?!');
 /*!40000 ALTER TABLE `comentarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-30 15:13:02
+-- Dump completed on 2018-06-30 16:24:21

@@ -16,30 +16,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `pessoas`
+-- Dumping events for database 'uds-trainee'
 --
 
-DROP TABLE IF EXISTS `pessoas`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `pessoas` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(45) DEFAULT NULL,
-  `idade` varchar(45) DEFAULT NULL,
-  `sexo` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
 --
--- Dumping data for table `pessoas`
+-- Dumping routines for database 'uds-trainee'
 --
-
-LOCK TABLES `pessoas` WRITE;
-/*!40000 ALTER TABLE `pessoas` DISABLE KEYS */;
-INSERT INTO `pessoas` VALUES (1,'alison','26','Masculino'),(2,'Rogerinho','36','Masculino'),(3,'Neumar','18','Masculino'),(4,'bruna marquezine','24','Feminino');
-/*!40000 ALTER TABLE `pessoas` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;

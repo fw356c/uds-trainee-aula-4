@@ -31,7 +31,7 @@ CREATE TABLE `postagens` (
   PRIMARY KEY (`id`),
   KEY `pessoa_id_idx` (`id_pessoas`),
   CONSTRAINT `pessoa_id` FOREIGN KEY (`id_pessoas`) REFERENCES `pessoas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `postagens` (
 
 LOCK TABLES `postagens` WRITE;
 /*!40000 ALTER TABLE `postagens` DISABLE KEYS */;
-INSERT INTO `postagens` VALUES (1,'Uds Trainee',1,'2018-06-30 14:59:00','lul...lul...lul...lul...lul...lul...lul...lul...');
+INSERT INTO `postagens` VALUES (1,'Uds Trainee',1,'2018-06-30 14:59:00','lul...lul...lul...lul...lul...lul...lul...lul...'),(2,'Melhor do mundo',3,'3018-06-30 15:44:00','Vou Ganhar a copa e ser o melhor do mundo!');
 /*!40000 ALTER TABLE `postagens` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-30 15:13:02
+-- Dump completed on 2018-06-30 16:24:21

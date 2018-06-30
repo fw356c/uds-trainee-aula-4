@@ -29,8 +29,10 @@ CREATE TABLE `likes` (
   `data_do_like` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `postagen_id_idx` (`id_postagens`),
+  KEY `possoa2_id_idx` (`id_pessoas`),
+  CONSTRAINT `possoa2_id` FOREIGN KEY (`id_pessoas`) REFERENCES `pessoas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `xsedtcftvugybjimko` FOREIGN KEY (`id_postagens`) REFERENCES `postagens` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +41,7 @@ CREATE TABLE `likes` (
 
 LOCK TABLES `likes` WRITE;
 /*!40000 ALTER TABLE `likes` DISABLE KEYS */;
-INSERT INTO `likes` VALUES (1,1,1,'2018-06-30 15:00:00'),(2,1,1,'2018-06-30 15:00:00'),(3,1,1,'2018-06-30 15:01:00');
+INSERT INTO `likes` VALUES (1,1,2,'2018-06-30 15:00:00'),(2,1,2,'2018-06-30 15:00:00'),(3,1,2,'2018-06-30 15:01:00'),(4,2,4,'2018-06-30 15:46:00'),(5,2,1,'2018-06-30 15:47:00'),(6,2,2,'2018-06-30 15:47:00'),(7,2,3,'2018-06-30 15:48:00');
 /*!40000 ALTER TABLE `likes` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-30 15:13:02
+-- Dump completed on 2018-06-30 16:24:21

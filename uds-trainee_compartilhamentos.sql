@@ -30,8 +30,10 @@ CREATE TABLE `compartilhamentos` (
   `texto_compar` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `postagen_id_idx` (`id_postagens`),
-  CONSTRAINT `fvghbjnkm` FOREIGN KEY (`id_postagens`) REFERENCES `postagens` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+  KEY `pessoal1_id_idx` (`id_pessoas`),
+  CONSTRAINT `fvghbjnkm` FOREIGN KEY (`id_postagens`) REFERENCES `postagens` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `pessoal1_id` FOREIGN KEY (`id_pessoas`) REFERENCES `pessoas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +42,7 @@ CREATE TABLE `compartilhamentos` (
 
 LOCK TABLES `compartilhamentos` WRITE;
 /*!40000 ALTER TABLE `compartilhamentos` DISABLE KEYS */;
-INSERT INTO `compartilhamentos` VALUES (1,1,2,'2018-06-30 15:03:00','Só magia TOP!');
+INSERT INTO `compartilhamentos` VALUES (1,1,2,'2018-06-30 15:03:00','Só magia TOP!'),(2,1,2,'2018-06-30 15:39:00','neumar cai novamente na copa do mundo!'),(3,2,4,'2018-06-30 15:48:00','sera meu deus!');
 /*!40000 ALTER TABLE `compartilhamentos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-30 15:13:01
+-- Dump completed on 2018-06-30 16:24:21
